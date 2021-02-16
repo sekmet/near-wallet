@@ -521,7 +521,7 @@ export const { selectAccount, refreshAccountOwner, refreshAccountExternal, refre
     ],
     REFRESH_URL: null,
     UPDATE_STAKING_ACCOUNT: [
-        async (accountId) => await wallet.staking.updateStakingAccount([], [] , accountId),
+        async (accountId) => await wallet.staking.updateStakingAccount([] , accountId),
         (accountId) => ({
             accountId,
             ...showAlert({ onlyError: true })
