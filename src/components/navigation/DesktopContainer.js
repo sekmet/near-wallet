@@ -93,8 +93,8 @@ class DesktopContainer extends Component {
             availableAccounts,
             selectAccount,
             showNavLinks,
-            showLimitedNav
-        } = this.props;
+            showLimitedNav,
+        } = this.props
 
         return (
             <Container>
@@ -119,6 +119,8 @@ class DesktopContainer extends Component {
                             accountId={account.accountId}
                             accounts={availableAccounts}
                             selectAccount={selectAccount}
+                            accountsBalance={account.accountsBalance}
+                            balance={account.balance}
                         />
                     </>
                 }

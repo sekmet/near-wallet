@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
-import { switchAccount } from '../../actions/account';
+import { switchAccount, getAvailableAccountsBalance, getAccountBalance } from '../../actions/account';
 import { connect } from 'react-redux';
 import DesktopContainer from './DesktopContainer';
 import MobileContainer from './MobileContainer';
@@ -115,7 +115,8 @@ const mapStateToProps = ({ account, availableAccounts }) => ({
 })
 
 const mapDispatchToProps = {
-    switchAccount
+    switchAccount,
+    getAvailableAccountsBalance,
 }
 
 export default connect(
