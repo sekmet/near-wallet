@@ -497,7 +497,7 @@ export const switchAccount = (accountId) => async (dispatch, getState) => {
     dispatch(handleRefreshUrl())
 }
 
-export const { selectAccount, refreshAccountOwner, refreshAccountExternal, refreshUrl, updateStakingAccount, updateStakingLockup, getBalance } = createActions({
+export const { selectAccount, refreshAccountOwner, refreshAccountExternal, refreshUrl, updateStakingAccount, updateStakingLockup, getBalance, getAccountBalance } = createActions({
     SELECT_ACCOUNT: wallet.selectAccount.bind(wallet),
     REFRESH_ACCOUNT_OWNER: [
         wallet.refreshAccount.bind(wallet),
@@ -530,5 +530,9 @@ export const { selectAccount, refreshAccountOwner, refreshAccountExternal, refre
             ...showAlert({ onlyError: true })
         })
     ],
-    GET_BALANCE: wallet.getBalance.bind(wallet)
+    GET_BALANCE: wallet.getBalance.bind(wallet),
+    GET_ACCOUNT_BALANCE: [
+        wallet.getBalance.bind(wallet),
+        (accountId) => ({ accountId })
+    ]
 })
