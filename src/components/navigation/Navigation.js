@@ -68,7 +68,7 @@ class Navigation extends Component {
         return this.props.account.accountId;
     }
 
-    get showLimitedNav() {   
+    get showLimitedNav() {
         return window.location.pathname === '/sign'
     }
 
