@@ -655,6 +655,7 @@
 
     "loading": "Loading...",
     "loadingNoDots": "Loading",
+    "sync": "Sync",
 
     "balance": {
         "balance": "Total Balance",
